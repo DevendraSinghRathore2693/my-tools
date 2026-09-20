@@ -36,3 +36,11 @@ sudo apt update
 
 #check status of docker
 sudo systemctl status docker
+
+#docker group
+sudo usermod -aG docker $USER
+newgrp docker
+
+#if permisson error, give permission
+sudo chmod 666 /var/run/docker.sock
+
